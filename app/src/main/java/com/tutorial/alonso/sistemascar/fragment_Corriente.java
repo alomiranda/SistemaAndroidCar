@@ -15,7 +15,7 @@ public class fragment_Corriente extends Fragment {
     View rootView;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fm_corriente, container, false);
+        rootView = inflater.inflate(R.layout.fm_encendido, container, false);
         return rootView;
     }
 }
