@@ -16,7 +16,7 @@ public class fragment_Encendido extends Fragment {
     int contador = 0;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fm_encendido, container, false);
+        rootView = inflater.inflate(R.layout.fm_Lista, container, false);
         TextView texto = (TextView) rootView.findViewById(R.id.texto_pedidos);
         texto.setText("Incrementador de Pedidos" + "\n\n" + contador);
         contador++;
