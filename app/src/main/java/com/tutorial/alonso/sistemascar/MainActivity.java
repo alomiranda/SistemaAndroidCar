@@ -1,7 +1,5 @@
 package com.tutorial.alonso.sistemascar;
 
-import java.util.Locale;
-
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -10,13 +8,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener{
@@ -36,6 +27,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
      */
     ViewPager mViewPager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,13 +42,15 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        ActionBar.Tab tab = actionBar.newTab().setText("Arranque").setTabListener(this);
+
+
+        ActionBar.Tab tab = actionBar.newTab().setText("Add Tarea").setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Arranque").setTabListener(this);
+        tab = actionBar.newTab().setText("HOY").setTabListener(this);
         actionBar.addTab(tab);
 
-        tab = actionBar.newTab().setText("Accesorios").setTabListener(this);
+        tab = actionBar.newTab().setText("LISTA").setTabListener(this);
         actionBar.addTab(tab);
     }
 
@@ -106,11 +100,11 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         public Fragment getItem(int arg0) {
             switch (arg0) {
                 case 0:
-                    return new fragment_Corriente();
+                    return new fragment_addTarea();
                 case 1:
-                    return new fragment_Encendido();
+                    return new fragment_Hoy();
                 case 2:
-                    return new fragment_Accesorios();
+                    return new fragment_Lista();
                 default:
                     return null;
             }

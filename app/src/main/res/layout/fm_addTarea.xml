@@ -63,9 +63,10 @@
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Fecha Entrega"
             android:id="@+id/textView2"
-            android:layout_centerVertical="true"
+            android:layout_below="@+id/editText2"
             android:layout_alignLeft="@+id/editText3"
-            android:layout_alignStart="@+id/editText3" />
+            android:layout_alignStart="@+id/editText3"
+            android:layout_marginTop="42dp" />
 
         <EditText
             android:layout_width="wrap_content"
