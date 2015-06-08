@@ -73,7 +73,7 @@ public class adminSql extends SQLiteOpenHelper {
         db.close();
     }
 
-    public List<tarea> getAllBooks() {
+    public List<tarea> getAllTareas() {
         List<tarea> books = new LinkedList<tarea>();
 
         // 1. build the query

@@ -18,6 +18,8 @@ import android.widget.EditText;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
+import java.util.Date;
+
 public class fragment_addTarea extends Fragment  implements OnClickListener  {
     View rootView;
 
@@ -25,15 +27,21 @@ public class fragment_addTarea extends Fragment  implements OnClickListener  {
     private Button bt;
     adminSql db;
 
+    private Date fecha;
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fm_addtarea, container, false);
         et1 = (EditText) rootView.findViewById(R.id.editText);
         et2 = (EditText) rootView.findViewById(R.id.editText2);
-        et3 = (EditText) rootView.findViewById(R.id.editText3);
+        et3 = (EditText) rootView.findViewById(R.id.editText5);
         et4 = (EditText) rootView.findViewById(R.id.editText4);
 
+
+
          bt = (Button) rootView.findViewById(R.id.button);
+
+        bt.setOnClickListener(this);
 
         db = new adminSql(getActivity().getApplicationContext());
 
@@ -65,7 +73,7 @@ public class fragment_addTarea extends Fragment  implements OnClickListener  {
         et3.setText("");
         et4.setText("");
 
-        Toast.makeText(getActivity(), "Se cargaron los datos del alumno",
+        Toast.makeText(getActivity(), "Se agrego Tarea",
                 Toast.LENGTH_SHORT).show();
 
 
